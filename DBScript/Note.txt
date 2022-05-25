@@ -1,0 +1,2 @@
+- Add column name in table user
+- set role_id_del allow null

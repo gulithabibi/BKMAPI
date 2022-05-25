@@ -1,0 +1,32 @@
+
+
+Create table name(check in env.)
+>php artisan make:migration table_name
+
+
+Create model
+>php artisan make:model model_name
+ex: php artisan make:model Product
+
+Download composer : https://getcomposer.org/download/
+
+Create new project
+>composer create-project laravel/larevel project_name
+
+To run localhost 
+>php artisan serve
+
+
+After Create custom Helper
+>composer dumb-autoload
+
+$curl = curl_init($url);
+curl_setopt($curl, CURLOPT_URL, $url);
+curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
+
+$headers = array(
+   "Accept: application/json",
+   "Authorization: Bearer {token}",
+);
+curl_setopt($curl, CURLOPT_HTTPHEADER, $headers);
+//for debug only!
