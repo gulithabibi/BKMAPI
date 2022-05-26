@@ -85,7 +85,7 @@ class AuthServices
     }
 
     public function headerValid($request){
-        if($request->header('x-api-key')==config('global.header.x-api-key')){
+        if($request->header('x-api-key')==env('API_KEY')){
             return true;
         }
         return false;
