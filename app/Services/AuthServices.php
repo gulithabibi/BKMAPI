@@ -11,7 +11,7 @@ use Illuminate\Support\Facades\Hash;
 class AuthServices
 {
     public function register($request){
-        if(!AuthServices::headerValid($request)){
+        if(!self::headerValid($request)){
             return ApiResponse::getUnauthorizedResponse(config('global.error_message.api_key_not_valid'));
         }
 
@@ -43,7 +43,7 @@ class AuthServices
         return ApiResponse::getCreatedResponse($data);
      }
     public function login($request){
-        if(!AuthServices::headerValid($request)){
+        if(!self::headerValid($request)){
             return ApiResponse::getUnauthorizedResponse(config('global.error_message.api_key_not_valid'));
         }
 

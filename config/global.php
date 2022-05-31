@@ -11,7 +11,8 @@ return[
 
     'error_message'=>[
         'api_key_not_valid'=>'Data x-api-key not valid',
-        'user_not_found'=>'User not found'
+        'user_not_found'=>'User not found',
+        'bad_request'=>'Bad request'
     ],
 
     'message'=>[

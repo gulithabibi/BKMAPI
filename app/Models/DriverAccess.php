@@ -6,12 +6,12 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Laravel\Sanctum\HasApiTokens;
 
-class DriverAccess extends Model
+class DriverAccess extends BaseModel
 {
     use HasApiTokens,HasFactory;
 
     protected $table='driver_access';
-
+    
     protected $fillable = [
         'id',
         'driver_id',
@@ -23,11 +23,10 @@ class DriverAccess extends Model
 
     protected $hidden =[
         'username',
-        'password',
-        'created_date',
-        'created_by',
-        'updated_date',
-        'updated_by',
-        'isactive'
+        'password'
    ];
+
+   public function driver(){
+       return $this->belongsTo(DriverAccess::class);
+   }
 }

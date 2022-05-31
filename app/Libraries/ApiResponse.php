@@ -35,15 +35,18 @@ class ApiResponse{
         );
     }
 
-    public function getNotFoundResponse($msg){
+    public function getNotFoundResponse($msg=""){
+        if(empty($msg)) $msg="Data Not Found";
         return ApiResponse::getErrorResponse("NotFound",$msg);
     }
 
-    public function getBadRequestResponse(){
+    public function getBadRequestResponse($msg=""){
+        if(empty($msg)) $msg="Bad Request";
         return ApiResponse::getErrorResponse("BadRequest",$msg);
     }
 
-    public function getUnauthorizedResponse($msg){
+    public function getUnauthorizedResponse($msg=""){
+        if(empty($msg)) $msg="Unauthorized";
         return ApiResponse::getErrorResponse("Unauthorized",$msg);
     }
 }
